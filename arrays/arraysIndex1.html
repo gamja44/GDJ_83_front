@@ -8,7 +8,7 @@
 <body>
     <!-- //checked의 속성을 가져와라 -->
     <!-- 전체 선택 -->
-    <input type="checkbox"  id="checkAll" value="1" >
+    <input type="checkbox"  id="checkAll" value="1" checked>
     <input type="checkbox" class="ch" name="ch" value="2">
     <input type="checkbox" class="ch" name="ch" value="3">
     <input type="checkbox" class="ch" name="ch" value="4">
@@ -19,17 +19,26 @@
     <script>
         //클릭을 누르면 전체 체크박스 선택
         const ch = document.getElementsByClassName("ch");
+        const checkAll = document.getElementById("checkAll");
         
         function info(){
-           
-            for(let i=o)
+
+        if(checkAll.checked == true){
+            for(let i=0;i<ch.length;i++){
+                    
+                    ch[i].checked=true;
             
-           ch[0].checked=true;
-           
-        }   
+                } 
+            }else{
+                for(let i=0;i<ch.length;i++){
+                    
+                    ch[i].checked=false;
             
-        
-        ch[1].checked = false;
+                }   
+            }
+       
+         }
+
 
 
     </script>
