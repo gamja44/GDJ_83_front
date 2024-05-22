@@ -9,7 +9,7 @@
     <script>
         let ar1 = new Array();
         let ar2 = [];
-        let ar3 = [1,2,3];
+        let ar3 = [1,8,3,5,9];
 
         console.log(ar1.length);
         console.log(ar2.length);
@@ -22,6 +22,15 @@
 
         i = 100;
         console.log(ar3[1])
+
+        ar3.push('a');
+        ar3.pop();
+
+        ar3.shift();
+        ar3.unshift('first');
+        ar3.sort();
+        ar3.reverse();
+
 
         for(let j =0;j<ar3.length;j++){
             console.log(ar3[j])
