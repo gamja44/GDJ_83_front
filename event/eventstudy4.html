@@ -6,21 +6,43 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <div id="result"></div>
+
     <button id="btn1">CLICK</button>
-    <button id="btn2">BUTTON</button>
+    <!-- <button id="btn2">BUTTON</button> -->
+    <button class="b1" title="btn1">BTN1</button>
+    <button class="b1" title="btn2">BTN1</button>
+    <button class="b1" title="btn3">BTN1</button>
+
 
     <script>
         const btn1 = document.getElementById("btn1");
         const btn2 = document.getElementById("btn2");
+        const result = document.getElementById("result");
+        //배열에 이벤트를 걸수없음 addeventlister사용 불가
+        //b[0].addeventlister 하나씩 사용
+        const b1 = document.getElementsByClassName("b1");
+
+        for(let i=0; i<b1.length;i++){
+            b1[i].addEventListener("click", function(){
+                // console.log(b1[i].title);
+                console.log(this.title);
+
+
+            })
+        }
 
         btn1.addEventListener("click", function(){
-            console.log("click");
+            result.innerHTML='<button id="btn2">BUTTON</button>';
         })
         btn2.addEventListener("click", function(){
             // console.log("클릭");
 
             //이벤트 강제실행
-            btn1.click();
+            //btn1.click();
+            console.log("test");
+
         })
     </script>
 </body>
