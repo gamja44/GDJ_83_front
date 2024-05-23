@@ -2,19 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <!-- 넥스트버튼을 누를 때마다 다음 페이지로 이동
     배열을 사용해서 사진을 꺼내써라 -->
     <div>
-        <img src="/arrays/images/1.jpg" alt="">
+        <img src="/arrays/images/1.jpg" alt="" id="result">
     </div>
-    <button>Next</button>
+    <button onclick="change">Next</button>
 
     <script>
+        const result = document.getElementById("result");
         let ar = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"]
+        let i = 1;
+
+        function change(){
+            if(i>4){
+                alert('마지막이미지');
+                i=0;
+            }
+            result.src = "/arrays/images/" + ar[i];
+            i++;
+        }
+           
 
     </script>
 </body>
