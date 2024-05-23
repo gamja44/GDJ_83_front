@@ -19,21 +19,17 @@
         const ch = document.getElementsByClassName("ch");
         const checkAll = document.getElementById("checkAll");
        
-        
+        //for문 안에 function함수안에 들어있는 for문
         for(let i=0;i<ch.length;i++){
             ch[i].addEventListener("click", function(){
-                //최종 결과물을 담을 변수
                 let flag=true;
 
-                //4개의 체크박스의 체크 유무를 판단
                 for(let j=0;j<ch.length;j++){
                     if(!ch[j].checked){
                         flag=false;
                         break;
                     }
                 }
-
-                //최종 결과물을 checkAll에 대입
                 checkAll.checked=flag;
                 
             })
