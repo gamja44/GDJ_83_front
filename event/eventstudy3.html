@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <input type="text" id="id1">
+    <input type="text" id="id2">
+    <input type="reset" value="RESET">
+    </form>
+    <!-- 폼밖에 있어도 적용시키고 싶으면 스크립트를 사용한다 -->
+    <input type="reset" value="RESET">
+
+
+    <script>
+        const id1 = document.getElementById("id1");
+        const id2 = document.getElementById("id2");
+
+        id1.addEventListener("keyup", function(){
+            //키프레스는 컨트롤키있는 줄(특수키)은 반응을 하지않음
+            //키다운은 게임할 때 꾸욱 누르면 자동이동
+            //키업은 눌렀다 뗐을 때 사용
+            console.log("keypress");
+        })
+
+        id1.addEventListener("focus",function(){
+            id1.classList.add("bg");
+        })
+        //제대로 입력안하고 나갈때 나가는 입력문구가 나오는데 그럴때 사용
+        id1.addEventListener("blur", function(){
+            id1.classList.remove("bg")
+        })
+
+        //value가 바뀌었을 때 변경된다.
+        id2.addEventListener("change", function(){
+            console.log("값이 변경됨");
+        })
+    </script>
+</body>
+</html>

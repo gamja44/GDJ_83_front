@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">CLICK</button>
+    <button id="btn2">BUTTON</button>
+
+    <script>
+        const btn1 = document.getElementById("btn1");
+        const btn2 = document.getElementById("btn2");
+
+        btn1.addEventListener("click", function(){
+            console.log("click");
+        })
+        btn2.addEventListener("click", function(){
+            // console.log("클릭");
+
+            //이벤트 강제실행
+            btn1.click();
+        })
+    </script>
+</body>
+</html>
