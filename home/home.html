@@ -17,19 +17,19 @@
 
     <div>
         <!--할일 적고 버튼을 클릭하면 등록-->
-        <input type="text">
-        <button>Add</button>
+        <input type="text" id="input">
+        <button onclick="btn1">Add</button>
     </div>
 
-    <div>
-        <div>
+    <div id="result1">
+        <div id="result2">
             <!--클릭하면 체크박스에 체크 된것들을 삭제-->
-            <button>휴지통</button>
+            <button onclick="btn2">휴지통</button>
         </div>
 
         <!--체크 박스에 체크 하면 선이 생김 -->
         <!--체크 박스에 체크 해제 하면 선이 사라짐 -->
-        <div>
+        <!-- <div>
             <input type="checkbox">
             <span>게임하기</span>
         </div>
@@ -37,8 +37,41 @@
         <div>
             <input type="checkbox">
             <span>밥먹기</span>
-        </div>
+        </div> -->
     </div>
 
+    <script>
+        // const input = document.getElementById("input");
+        // const btn1= document.getElementById("btn1");
+        // const result1 = document.getElementById("result1"); 
+
+        
+
+        // result1.addEventListener("click", function(){
+        //     let div = document.createElement("div");
+        //     let input =document.createAttribute("input");
+        //     input.type="checkbox";
+        //     let span = document.createAttribute("span")
+        //     div.append("input");
+        //     input.append("span");
+        //     result1.append(div);
+
+        // })
+
+        // // result.addEventListener("click", function(e){
+        // //     if(e.target.classList.contains("ch")){
+
+        // //     }
+        // // })
+
+
+
+
+
+
+
+
+
+    </script>
 </body>
 </html>
