@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <!-- 전체선택 -->
+        <input type="checkbox">
+        <button id="btn">Delete</button>
+    </div>
+    <div id="result1">
+        <input type="checkbox" class="flag" data-del-num="result1">
+        <span>mail title1</span>
+    </div>
+    <div id="result2">
+        <input type="checkbox" class="flag" data-del-num="result2">
+        <span>mail title2</span>
+    </div>
+    <div id="result3">
+        <input type="checkbox" class="flag" data-del-num="result3">
+        <span>mail title3</span>
+    </div>
+    <div id="result4">
+        <input type="checkbox" class="flag" data-del-num="result4">
+        <span>mail title4</span>
+    </div>
+    <div id="result5">
+        <input type="checkbox" class="flag" data-del-num="result5">
+        <span>mail title5</span>
+    </div>
+
+    <script>
+        const btn = document.getElementsById("btn");
+        const flag = document.getElementsByClassName("flag");
+
+        btn.addEventListener("click",function(){
+
+            let ar = [];
+
+            //삭제할 id명들을 따로 보관
+            for(let i=0;i<flag.length;i++){
+                if(flag[i].checked){
+                    ar.push(flag[i].getAttribute("data-del-num"));
+                }
+            }
+            //보관된 ID를 꺼내서 삭제
+            for(let i=0;i<ar.length;i++){
+                document.getElementById(ar[i]).remove();
+            }
+
+            })
+        
+
+        
+
+
+        
+        // for(let i=0;i<c1.length;i++){
+        //     c1[i].addEventListener("click", function(){
+        //         document.getElementById("result" + this.getAttribute("checked")).remove();
+        //     })
+        // }       
+
+        //  for(let i=0;i<btns.length;i++){
+        //     btns[i].addEventListener("click",function(){
+        //         console.log(this.getAttribute( "data-del-num"));
+        //         document.getElementById("result" + this.getAttribute( "data-del-num")).remove();
+        //     })
+        // }
+
+    </script>
+</body>
+</html>
