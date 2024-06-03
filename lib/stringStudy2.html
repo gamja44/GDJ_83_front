@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" class="t1">
+    <input type="file" class="t1">
+    <input type="file" class="t1">
+    <button id="btn">click</button>
+
+    <script>
+    // input태그에 value값이 이미지가 아니면 아닙니다 콘솔 창에 보여주기
+    const t1 = document.getElementById("t1");   //아이디를 통해서 요소를 가져오기
+    const btn = document.getElementById("btn"); 
+    const finles = ["gif","jpg","png"];
+
+    btn.addEventListener("click",function(){
+        //console.log("작동");
+        let ar = t1.value;
+        ar = ar.substring(ar.lastIndexOf(".")+1);
+        let flag = false;
+
+        for(let i=0;i<files.length;i++){
+            if(ar==files[i]){
+                flag= true;
+                break;
+            }
+
+        }
+
+        if(flag){
+            console.log("이미지파일이다")
+        }else{
+            console.log("이미지파일아니다")
+        }
+
+        //console.log(ar)
+        })
+
+
+
+    
+
+    </script>
+</body>
+</html>

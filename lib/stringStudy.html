@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="t1">
+    <button id="btn">CLICK</button>
+    <div id="result">
+
+    </div>
+
+    <script>
+        //입력하고 버튼을 클리하면
+        //글자당 1000원씩 계산
+        //클릭시 이벤트가져오기
+        //글자 가져오기
+        //글자 1당 1000원
+
+        //아이디이용 방법
+        const t1 = document.getElementById("t1");
+        //자바에서 final const
+        const btn= document.getElementById("btn");
+        const result = document.getElementById("result");
+
+        btn.addEventListener("click",function(){//콜백함수
+            //이벤트확인 실행
+            //확인 용도
+            console.log(t1.value.length*1000);//t1속성 알아보기
+           // result.innerHTML='<h3>결과값은 : ' +t1.value.length*1000 + '원입니다<h3>';
+            let h3 = document.createElement("h3");//<h3></h3>
+            h3.innerText = '결과값은 : '+t1.value.length*1000 + '원입니다';
+            result.append(h3);
+
+            
+
+
+
+            result.classList.add("bg");
+        });
+
+
+
+
+    </script>
+</body>
+</html>
