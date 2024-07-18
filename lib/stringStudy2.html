@@ -6,20 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="file" class="t1">
-    <input type="file" class="t1">
-    <input type="file" class="t1">
+    <input type="file" class="t" id="t1">
+    <input type="file" class="t" id="t1">
+    <input type="file" class="t" id="t1">
     <button id="btn">click</button>
 
     <script>
     // input태그에 value값이 이미지가 아니면 아닙니다 콘솔 창에 보여주기
-    const t1 = document.getElementById("t1");   //아이디를 통해서 요소를 가져오기
+    const t = document.getElementsByClassName("t");   //아이디를 통해서 요소를 가져오기
+    const btn = document.getElementById("btn"); 
     const btn = document.getElementById("btn"); 
     const finles = ["gif","jpg","png"];
 
     btn.addEventListener("click",function(){
         //console.log("작동");
-        let ar = t1.value;
+        let ar = t1[].value
         ar = ar.substring(ar.lastIndexOf(".")+1);
         let flag = false;
 
@@ -31,7 +32,7 @@
 
         }
 
-        if(flag){
+        if(count==t.length){
             console.log("이미지파일이다")
         }else{
             console.log("이미지파일아니다")
