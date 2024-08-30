@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>문서구조를 묶는 태그를 말한다. id나class를 문서구조를 만들거나 스타일적용을 할 수 있다</p>
+        <header>
+            문서안에서 머리 몸 다리를 구분할때 사용한다
+            <nav>내비게이션영역은 웹문서안에서 다른 위치를 연결할때 사용하는태그
+                다른 웹문서로 연결하는 링크를 만들고 id속성을 지정 시 내비게이션마다 다른
+                스타일을 적용가능한다
+            </nav>
+        </header>
+        <main>
+            main태그는 문서에서 한번만 사용가능하며 핵심콘텐츠만 담는 영역인데
+            자주 사용하지는 않는다
+            <article>독립된콘텐츠를 담을때사용한다</article>
+            <section>콘텐츠를 묶는 용도로 사용</section>
+            <aside>사이드바영역</aside>
+        </main>
+        <footer>
+            사이트제작정보나 저작권정보를 넣는다
+        </footer>
+
+
+        <form method="post" name="a" target="_blank" action="jsp">
+            데이터를 제출하기위한 대화형 문서구획
+            <fieldset>
+                <legend>quiet</legend>
+                네모칸위에 제목이 붙음
+            </fieldset>
+            <label>제목<input type="text"></label>
+            <p>레이블안에 이렇게 제목을 넣을수도있다</p>
+            <input type="text" id="name">
+            <label for="name"></label>
+            <textarea>
+                게시판에서 글을 입력하거나 회원가입 양식에서 사용자 약관을 표시할때 자주 사용한다
+            </textarea>
+            <select>
+                <option value="값넘겨주는곳">1</option>
+                <option selected>2</option>
+                <option>3</option>
+            </select>
+
+            <input type="text" list="데이터목록id">
+            <datalist id="데이터목록id">
+                <option value="1">1</option>
+                <option>2</option>
+            </datalist>
+
+            <button type="submit">submit은 폼을 서버로 전송한다
+                form의 action속성을 이용해서 바로 페이지로 들어간다
+            </button>
+            <button type="reset">폼의 내용을 초기화한다</button>
+            <button type="button"></button>
+
+            <input type="text">
+            <input type="password">
+            <input type="url">
+            <input type="tel">
+            <input type="search">
+            <input type="email">
+            <p>value텍스트필드에서 보여주는 내용이다 이 속성을 사용하지않으면 빈텍스트필드가 표시된다</p>
+
+            <input type="checkbox">
+            <input type="radio">
+            <p>value는 서버에게 넘겨줄값을 지정할때 사용한다</p>
+            name속성은 폼요소를 제어할때 사용된다
+            라디오버튼에서 하나의 버튼만 선택할수있게하려면 라디오버튼의 name값을 똑같이 지정한다
+
+            <input type="number">
+            <input type="range">
+
+            <input type="date" value="2024-07-28">
+            <input type="month">
+            <input type="week">
+            <input type="time">
+            <input type="datetime">
+            <input type="datetime-local">
+
+            <input type="submit">
+            <input type="reset">
+            <input type="button" value="내용">
+            <input type="file">
+            <input type="hidden" value="서버로 넘길값">
+
+            <p>자동입력커서를 갖다 놓는 autofocus속성
+                힌트를 주는 placeholder속성
+                읽기전용필드를 만들어주는readonly속성
+                필수입력필드를 지정하는 required속성
+            </p>
+
+
+        </form>
+    </div>
+</body>
+</html>

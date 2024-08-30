@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습<title>
+</head>
+<body>
+    <div>
+        <p>문서구조를 묶는 태그를 말한다. id나class를 문서구조를 만들거나 스타일적용을 할 수 있다</p>
+        <header>
+            문서안에서 머리 몸 다리를 구분할때 사용한다
+            <nav>내비게이션영역은 웹문서안에서 다른 위치를 연결할때 사용하는태그
+                다른 웹문서로 연결하는 링크를 만들고 id속성을 지정 시 내비게이션마다 다른
+                스타일을 적용가능한다
+            </nav>
+        </header>
+        <main>
+            main태그는 문서에서 한번만 사용가능하며 핵심콘텐츠만 담는 영역인데
+            자주 사용하지는 않는다
+            <article>독립된콘텐츠를 담을때사용한다</article>
+            <section>콘텐츠를 묶는 용도로 사용</section>
+            <aside>사이드바영역</aside>
+        </main>
+        <footer>
+            사이트제작정보나 저작권정보를 넣는다
+        </footer>
+
+
+        <form method="post" name="a" target="_blank" action="jsp">
+            데이터를 제출하기위한 대화형 문서구획
+            <fieldset>
+                <legend>quiet</legend>
+                네모칸위에 제목이 붙음
+            </fieldset>
+            <label>제목<input type="text"></label>
+            <p>레이블안에 이렇게 제목을 넣을수도있다</p>
+            <input type="text" id="name">
+            <label for="name"></label>
+
+
+
+
+        </form>
+    </div>
+</body>    
+</html>
